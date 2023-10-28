@@ -2,10 +2,10 @@
 
 # 定义 UUID 及 伪装路径,请自行修改.(注意:伪装路径以 / 符号开始,为避免不必要的麻烦,请不要使用特殊符号.)
 UUID='62dec585-f00e-4dcc-97b3-dde3cbb5ed04'
-VMESS_WSPATH='/1'
-VLESS_WSPATH='/2'
-TROJAN_WSPATH='/3'
-SS_WSPATH='/4'
+VMESS_WSPATH='/khodemory-vms'
+VLESS_WSPATH='/khodemory-vls'
+TROJAN_WSPATH='/khodemory-trs'
+SS_WSPATH='/khodemory-sss'
 sed -i "s#UUID#$UUID#g;s#VMESS_WSPATH#${VMESS_WSPATH}#g;s#VLESS_WSPATH#${VLESS_WSPATH}#g;s#TROJAN_WSPATH#${TROJAN_WSPATH}#g;s#SS_WSPATH#${SS_WSPATH}#g" config.json
 sed -i "s#VMESS_WSPATH#${VMESS_WSPATH}#g;s#VLESS_WSPATH#${VLESS_WSPATH}#g;s#TROJAN_WSPATH#${TROJAN_WSPATH}#g;s#SS_WSPATH#${SS_WSPATH}#g" /etc/nginx/nginx.conf
 sed -i "s#RELEASE_RANDOMNESS#${RELEASE_RANDOMNESS}#g" /etc/supervisor/conf.d/supervisord.conf
